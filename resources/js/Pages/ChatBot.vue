@@ -61,7 +61,6 @@ const handleSendMessage = () => {
             message: userInput.value,
         })
         .then((res) => {
-            console.log('res', res);
             messages.value.push({ type: ChatMessageType.BOT, message: res.data.bot_response as string });
         })
         .finally(() => (userInput.value = ''));
